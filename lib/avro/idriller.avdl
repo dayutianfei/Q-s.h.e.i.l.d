@@ -1,0 +1,39 @@
+/**
+ *
+ * Based by flume.avdl which in flume-ng sdk package.
+ *
+ **
+ *
+ * Modified by zhenyu.wang for idriller-8.9's load moudle, a loader system.
+ * 1. Add a new RPC message to get schema string of specific table.
+ * 2. Add a new RPC method to get the server's state
+ * 
+ * usage:
+ * you need avro-1.7.7.jar， avro-tools-1.7.7.jar，core-asl，mapper-asl
+ * java -jar avro-tools-1.7.7.jar compile schema user.avsc java
+ */
+ 
+@namespace("cn.dayutianfei.loadserver.lib.avro.protocol")
+
+protocol AvroSourceProtocol {
+
+  enum Status {
+    OK, FAILED, UNKNOWN
+  }
+
+  record AvroFlumeEvent {
+    map<string> headers;
+    bytes body;
+  }
+
+  /* The new RPC */
+  string getSchema( string dbName, string tblName );
+  
+    /* The new RPC */
+  string getQ();
+
+  Status append( AvroFlumeEvent event );
+
+  Status appendBatch( array<AvroFlumeEvent> events );
+
+}

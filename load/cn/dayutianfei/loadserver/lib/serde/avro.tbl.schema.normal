@@ -1,0 +1,28 @@
+{
+"namespace": "cn.ac.iie.fstore.file.avro",
+"type": "record",
+"name":"normal",
+"fields": [
+	{"name": "id", "type": "string"},
+	{"name": "ms_byte", "type": "string"},
+	{"name": "ms_short", "type": "string"},
+	{"name": "ms_int", "type": "string"},
+	{"name": "ms_long", "type": "string"},
+	{"name": "m_float", "type": "string"},
+	{"name": "m_double", "type": "string"},
+	{"name": "allchar", "type": "string"},
+	{"name": "allchar_no", "type": "string"},
+	{"name": "allvarchar", "type": "string"},
+	{"name": "allvarchar_no", "type": "string"},
+	{"name": "allvarchar_url", "type": "string"},
+	{"name": "allchar_url", "type": "string"},
+	{"name": "ipv4", "type": "string"},
+	{"name": "ipv6", "type": "string"},
+	{"name": "content", "type": "string"},
+	{"name": "d_binary", "type": "string"},
+	{"name": "d_lstore", "type": "string"},
+	{"name": "d_store", "type": "string"},
+	{"name": "time", "type": "string"},
+	{"name": "times", "type": "string"}
+	]
+}

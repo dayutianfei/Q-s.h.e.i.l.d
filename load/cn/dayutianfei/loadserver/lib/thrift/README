@@ -1,0 +1,2 @@
+ * usage:
+thrift --gen <language> <Thrift filename>

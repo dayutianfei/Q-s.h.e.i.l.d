@@ -1,0 +1,8 @@
+{
+        "namespace": "cn.ac.iie.fstore.file.avro",
+        "type": "record",
+        "name": "FilePutSet",
+        "fields": [
+        {"name":"doc_set","type":{"type":"array","items":"bytes"}}
+        ]
+}
