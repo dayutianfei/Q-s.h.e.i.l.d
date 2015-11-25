@@ -11,6 +11,7 @@
 	<classpathentry kind="src" path="jdbc"/>
 	<classpathentry kind="src" path="server"/>
 	<classpathentry kind="src" path="sql-engine"/>
+	<classpathentry kind="src" path="mybatis"/>
 	<classpathentry kind="src" path="msg"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="conf"/>

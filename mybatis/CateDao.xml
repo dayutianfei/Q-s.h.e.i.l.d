@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fwhale.dao.CateDao">
+	<insert id="save" parameterType="com.fwhale.model.Cate" useGeneratedKeys="true" keyProperty="id" >
+		INSERT INTO cate (name, des, userId)
+		VALUES (#{name}, #{des}, #{userId} )
+	</insert>
+	<delete id="delete" parameterType="int" >
+	   DELETE FROM cate WHERE id = #{id}
+	</delete>	
+	<update id="update" parameterType="com.fwhale.model.Cate">
+		UPDATE cate SET 
+	    name = #{name}, des = #{des} , userId = #{userId}  
+		WHERE id = #{id}
+	</update>
+	<delete id="delCateFileByCateId" parameterType="int">
+	  DELETE FROM cate_file WHERE cateId = #{cateId}
+	</delete>
+	<select id="getByUserId" resultType="com.fwhale.model.Cate" parameterType="int" >
+	 SELECT id, name, des, updateTime, userId from cate WHERE userId = #{userId} order by updateTime desc
+	</select>
+	<select id="getByNameAndUserId" resultType="com.fwhale.model.Cate" parameterType="map">
+	 SELECT id, name, des, updateTime, userId from cate WHERE name = #{name} and userId = #{userId} 
+	</select>
+	<select id="getById" resultType="com.fwhale.model.Cate" parameterType="int">
+	 SELECT id, name, des, updateTime, userId from cate WHERE id = #{id}
+	</select>
+	
+	<!-- 
+	<select id="getCatefileIds" resultType="list">
+	 SELECT DISTINCT file_id as id  from cate_file WHERE 1=1 
+	</select> 
+	 -->
+	<select id="getByFileId" resultType="com.fwhale.model.Cate" parameterType="int">
+	 SELECT id,name, des, updateTime, userId from cate 
+	 WHERE id in (select cateId from cate_file where fileId = #{id} ) order by updateTime desc
+	</select>
+	<select id="getNumByCateId" resultType="int" parameterType="int">
+	SELECT COUNT(*) FROM file JOIN cate_file ON file.id = cate_file.fileId WHERE  cate_file.cateId=#{cateId} AND file.status = 1 
+	</select>
+</mapper>  
