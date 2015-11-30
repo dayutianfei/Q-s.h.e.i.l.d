@@ -1,45 +1,15 @@
 package cn.dayutianfei.mybatis.demo;
 
-import java.util.List;
-
-import org.apache.ibatis.session.SqlSession;
-
-import cn.dayutianfei.mybatis.map.AddressMapper;
-import cn.dayutianfei.mybatis.map.FileInfoMapper;
-import cn.dayutianfei.mybatis.model.*;
-import cn.dayutianfei.mybatis.util.MyBatisUtil;
+import cn.dayutianfei.mybatis.dao.AddressDao;
 
 public class Main {
-
-    public List<FileInfo> findAllFileInfos() {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try {
-            FileInfoMapper StudentMapper = sqlSession.getMapper(FileInfoMapper.class);
-            return StudentMapper.findAllFileInfos();
-        }
-        finally {
-            sqlSession.close();
-        }
-    }
-    
-    public Address getAddress(int id) {
-        SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
-        try {
-            AddressMapper test = sqlSession.getMapper(AddressMapper.class);
-            return test.selectAddressById(id);
-        }
-        finally {
-            sqlSession.close();
-        }
-    }
-
 
     /**
      * @param args
      */
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        Main demo = new Main();
+        AddressDao demo = new AddressDao();
         System.out.println(demo.getAddress(1).toString());
     }
 

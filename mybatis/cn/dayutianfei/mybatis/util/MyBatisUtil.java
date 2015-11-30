@@ -11,28 +11,28 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
 /**
  * @author Siva
- *
+ * 
  */
-public class MyBatisUtil
-{
+public class MyBatisUtil {
     private static SqlSessionFactory sqlSessionFactory;
-    
+
     private static final Properties PROPERTIES = new Properties();
-    
-    static
-    {
+
+    static {
         try {
             InputStream is = DataSourceFactory.class.getResourceAsStream("/application.properties");
             PROPERTIES.load(is);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-    public static Connection getConnection() 
-    {
+
+
+    public static Connection getConnection() {
         String driver = PROPERTIES.getProperty("jdbc.driverClassName");
         String url = PROPERTIES.getProperty("jdbc.url");
         String username = PROPERTIES.getProperty("jdbc.username");
@@ -41,23 +41,22 @@ public class MyBatisUtil
         try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, username, password);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             throw new RuntimeException(e);
-        } 
+        }
         return connection;
     }
-    
-    public static SqlSessionFactory getSqlSessionFactory()
-    {
-        if(sqlSessionFactory==null) 
-        {
+
+
+    public static SqlSessionFactory getSqlSessionFactory() {
+        if (sqlSessionFactory == null) {
             InputStream inputStream;
-            try
-            {
+            try {
                 inputStream = Resources.getResourceAsStream("mybatis-config.xml");
                 sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-            }catch (IOException e)
-            {
+            }
+            catch (IOException e) {
                 throw new RuntimeException(e.getCause());
             }
         }

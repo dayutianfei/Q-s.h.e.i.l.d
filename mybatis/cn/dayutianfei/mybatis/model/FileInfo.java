@@ -18,25 +18,25 @@ public class FileInfo implements Serializable {
     }
 
     private static final long serialVersionUID = 1L;
-    private long id; // 文件唯一标识，全局唯一
+    private long fileId; // 文件唯一标识，全局唯一
 	private String fileName; //文件名
 	private String filePath; //文件访问路径，可以为一个URL地址
-	private IDrillerFileType fileType;
+	private String fileType;
 	private long updateTime; //文件更新时间
 	private Map<String,String> params; //文件参数
 	
 	@Override
     public String toString() {
-        return "FileInfo [id=" + id + ", fileName=" + fileName + ", filePath=" + filePath + ", fileType="
+        return "FileInfo [id=" + fileId + ", fileName=" + fileName + ", filePath=" + filePath + ", fileType="
                 + fileType + ", updateTime=" + updateTime + ", params=" + params + "]";
     }
 
-    public long getId() {
-        return id;
+    public long getFileId() {
+        return fileId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setFileId(long id) {
+        this.fileId = id;
     }
 
     public String getFileName() {
@@ -55,11 +55,11 @@ public class FileInfo implements Serializable {
         this.filePath = filePath;
     }
 
-    public IDrillerFileType getFileType() {
+    public String getFileType() {
         return fileType;
     }
 
-    public void setFileType(IDrillerFileType fileType) {
+    public void setFileType(String fileType) {
         this.fileType = fileType;
     }
 
