@@ -49,7 +49,7 @@ public class SciIKAnalzyerDemo extends Thread {
 	  
 	@SuppressWarnings("resource")
     public static void main(String[] args) throws InterruptedException, IOException{
-		String path1 = "/home/egret/q/Q-s.h.e.i.l.d/lib/lucene/dic.xml";
+		String path1 = "lucene/dic.xml";
 		//String path0 = "IKAnalyzer.cfg.xml";
 //		
 //		
