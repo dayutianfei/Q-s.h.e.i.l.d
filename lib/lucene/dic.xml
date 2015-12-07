@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+ <dict type="ext_dict">
+  <ext_dict>${DIC_HOME}/ext_dic/ext.dic</ext_dict>
+ </dict>
+ <dict type="ext_stopwords">
+  <ext_stopwords>${DIC_HOME}/ext_dic/stopword.dic</ext_stopwords>
+ </dict>
+</properties>

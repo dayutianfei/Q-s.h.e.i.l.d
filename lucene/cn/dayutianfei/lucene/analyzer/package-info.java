@@ -5,4 +5,4 @@
  * @author egret
  *
  */
-package cn.dayutinfei.lucene.analyzer;
+package cn.dayutianfei.lucene.analyzer;

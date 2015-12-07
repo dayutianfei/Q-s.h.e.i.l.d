@@ -215,5 +215,6 @@
 	<classpathentry kind="lib" path="lib/avro-1.7.4/avro-thrift-1.7.4.jar"/>
 	<classpathentry kind="lib" path="lib/bloomfilter.jar"/>
 	<classpathentry kind="lib" path="lib/db/mybatis-3.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene/SciIKAnalyzer5x.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

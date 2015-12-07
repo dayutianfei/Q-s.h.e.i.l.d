@@ -1,4 +1,4 @@
-package cn.dayutinfei.lucene.analyzer;
+package cn.dayutianfei.lucene.analyzer;
 
 public class AnalyzerExistsDemo {
 
