@@ -47,7 +47,7 @@ import org.wltea.analyzer.dic.Dictionary;
  */
 public class SciIKAnalzyerDemo extends Thread {
 	  
-	@SuppressWarnings("resource")
+	@SuppressWarnings({ "resource"})
     public static void main(String[] args) throws InterruptedException, IOException{
 		String path1 = "lucene/dic.xml";
 		//String path0 = "IKAnalyzer.cfg.xml";
