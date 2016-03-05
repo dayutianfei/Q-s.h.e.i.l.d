@@ -10,17 +10,18 @@ import java.sql.Statement;
 public class JDBCDemo {
 
 	// using the dirver from impala
-	/*
+	
 	 static String JDBCDriver = "com.cloudera.impala.jdbc41.Driver";
 	// Define a string as the connection URL
-	 private static final String CONNECTION_URL = "jdbc:impala://172.16.8.34:21050";
-	 */
+	 private static final String CONNECTION_URL = "jdbc:impala://172.16.2.206:21050";
+	 
 
+	 /*
 	// using the dirver from hive
 	static String JDBCDriver = "org.apache.hive.jdbc.HiveDriver";
 	// Define a string as the connection URL
 	private static final String CONNECTION_URL = "jdbc:hive2://172.16.2.202:21050/;auth=noSasl";
-
+    */
 	/**
 	 * @param args
 	 */
