@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="common"/>
 	<classpathentry kind="src" path="load"/>
+	<classpathentry kind="src" path="load-archive"/>
 	<classpathentry kind="src" path="lu-search"/>
 	<classpathentry kind="src" path="zookeeper"/>
 	<classpathentry kind="src" path="lucene"/>
