@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="common"/>
+	<classpathentry kind="src" path="rpc"/>
 	<classpathentry kind="src" path="load"/>
 	<classpathentry kind="src" path="load-archive"/>
 	<classpathentry kind="src" path="lu-search"/>
@@ -15,6 +15,7 @@
 	<classpathentry kind="src" path="mybatis"/>
 	<classpathentry kind="src" path="msg"/>
 	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="common"/>
 	<classpathentry kind="src" path="conf"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/hive/hive-beeline-0.13.1-cdh5.3.2.jar"/>
