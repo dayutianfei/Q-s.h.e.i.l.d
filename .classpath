@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="lu-search"/>
 	<classpathentry kind="src" path="zookeeper"/>
 	<classpathentry kind="src" path="lucene"/>
+	<classpathentry kind="src" path="kafka"/>
 	<classpathentry kind="src" path="hdfs"/>
 	<classpathentry kind="src" path="hbase"/>
 	<classpathentry kind="src" path="hive"/>
