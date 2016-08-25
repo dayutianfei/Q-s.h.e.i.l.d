@@ -128,9 +128,12 @@ public class TestBloomfilter {
 			}else{
 				temPath = temPath + "/" + mark;
 			}
+			System.out.println(temPath);
 			File file_ = new File(temPath);
-			file_.deleteOnExit();
-			FileOutputStream outStream = new FileOutputStream(temPath);  
+			if(file_.exists()){
+			    file_.delete();
+			}
+			FileOutputStream outStream = new FileOutputStream(file_);  
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outStream);  
             objectOutputStream.writeObject(bloomfilter);
             objectOutputStream.flush();
