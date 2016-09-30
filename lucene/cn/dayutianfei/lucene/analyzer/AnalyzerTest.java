@@ -18,10 +18,11 @@ public class AnalyzerTest {
             // 另外一个是TokenFilter，它主要作用是对切出来的词进行进一步的处理（如去掉敏感词、英文大
             // 小写转换、单复数处理）等。lucene中的Tokenstram方法首先创建一个tokenizer对象处理
             // Reader对象中的流式文本，然后利用TokenFilter对输出流进行过滤处理";  
-            String text = "www..baidu.com/yun*123*112?hehe-haha=中文测试分词 the to and or not we are f";  
+//            String text = "www..baidu.com/yun*123*112?hehe-haha=中文测试分词 the to and or not we are f"; 
+            String text = "zz.video.aa"; 
   
             // 自定义停用词  
-            String[] self_stop_words = { "Lucene", "release", "Apache", "." };  
+            String[] self_stop_words = { "Lucene", "release", "Apache" , "."};  
             CharArraySet cas = new CharArraySet(0, true);  
             for (int i = 0; i < self_stop_words.length; i++) {  
                 cas.add(self_stop_words[i]);  
