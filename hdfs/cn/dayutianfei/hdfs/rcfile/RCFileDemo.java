@@ -24,6 +24,7 @@ public class RCFileDemo {
 		conf = new Configuration();
 		//"/user/root/data/test2/year=2015/month=11/day=10/nnn"
 		String path = "/temp/rcfile/"+System.currentTimeMillis();
+//		String path = "/temp/000000_0";
 //		String path = "/home/egret/win7/000000_0";
 		Path src = new Path(path);
 		createRcFile(src, conf);
@@ -35,7 +36,7 @@ public class RCFileDemo {
 
 	//测试数据
 	private static String strings[] = { "1,beijing北京,123",
-			"2,shandong輩經,1243",
+			"2,shandong輩經,12"+'\002'+"345",
 			"3,henan하하,24453",
 			"4,hebeiСлужит для воспроизведения передачи громкого смеха,243423",
 			"5,yunan,243" ,
@@ -103,6 +104,7 @@ public class RCFileDemo {
 			for (int i = 0; i < cols.size(); i++) {
 				brw = cols.get(i);
 				// 根据start 和 length 获取指定行-列数据
+//				System.out.println(brw.getBytesCopy());
 				sb.append(Bytes.toString(brw.getData(), brw.getStart(),
 						brw.getLength()));
 				if (i < cols.size() - 1) {

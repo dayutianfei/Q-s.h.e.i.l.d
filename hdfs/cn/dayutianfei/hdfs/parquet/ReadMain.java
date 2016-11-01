@@ -7,7 +7,8 @@ import org.apache.hadoop.fs.Path;
 public class ReadMain {
     public static void main(String[] args){
         try {
-            QParquetFileReader reader = new QParquetFileReader(new Path("file:///temp/hawq/xyx_appendx"));
+//            QParquetFileReader reader = new QParquetFileReader(new Path("file:///temp/hawq/xyx_appendx"));
+            QParquetFileReader reader = new QParquetFileReader(new Path("file:///Users/dayutianfei/CentOS6/text.parquet"));
             boolean c = true;
             while(c){
                 try{
