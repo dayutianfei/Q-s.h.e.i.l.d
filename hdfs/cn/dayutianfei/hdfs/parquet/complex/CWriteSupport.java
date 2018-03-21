@@ -19,6 +19,7 @@ public class CWriteSupport extends WriteSupport<String[]> {
 
 	public CWriteSupport(MessageType schema) {
 		this.schema = schema;
+		LOG.info("start ");
 	}
 
 	@Override

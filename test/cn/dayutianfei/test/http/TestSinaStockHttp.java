@@ -205,7 +205,8 @@ public class TestSinaStockHttp {
 31：”15:05:32″，时间；
 		 */
 		String[] re = getContentFromUrl("http://hq.sinajs.cn/list=sh600050").split(",");
-//		String[] re = getContentFromUrl("http://hq.sinajs.cn/list=sz000100").split(",");
+		String[] re1 = getContentFromUrl("http://hq.sinajs.cn/list=sz002083").split(",");
 		System.out.println(re[3]);
+		System.out.println(re1[3]);
 	}
 }

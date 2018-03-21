@@ -36,7 +36,7 @@ public class RCFileDemo {
 
 	//测试数据
 	private static String strings[] = { "1,beijing北京,123",
-			"2,shandong輩經,12"+'\002'+"345",
+			"2,shandong輩經,12"+'\002'+"xxx"+'\001'+"345",
 			"3,henan하하,24453",
 			"4,hebeiСлужит для воспроизведения передачи громкого смеха,243423",
 			"5,yunan,243" ,

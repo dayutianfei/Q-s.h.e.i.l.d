@@ -24,7 +24,7 @@ public class CParquetWriter extends ParquetWriter<String[]> {
 				enableDictionary, conf);
 	}
 
-	@SuppressWarnings({ "deprecation" })
+	@SuppressWarnings({ })
 	public CParquetWriter(Path path, MessageType schema, WriteSupport<String[]> support,
 			CompressionCodecName codecName, boolean enableDictionary,
 			Configuration conf) throws IOException {
